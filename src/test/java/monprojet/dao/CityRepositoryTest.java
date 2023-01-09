@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import monprojet.dto.CountryPopulation;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -12,6 +13,9 @@ import jakarta.validation.ConstraintViolationException;
 import lombok.extern.log4j.Log4j2;
 import monprojet.entity.City;
 import monprojet.entity.Country;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Log4j2 // Génère le 'logger' pour afficher les messages de trace
 @DataJpaTest
@@ -53,5 +57,7 @@ public class CityRepositoryTest {
             log.info("On a reçu l'exception : " + e.getMessage());
         }    
     }
+
+
 
 }
